@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - DigitalMart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">DIGITAL<span>MART</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><button id="themeToggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button></li>
+                <li class="cart-indicator">
+                    <a href="cart.html"
+                        style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 5px;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="cart-page-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Shopping Cart</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="cart-layout">
+                <!-- Main Cart Area -->
+                <div class="cart-items-container">
+                    <div class="cart-header">
+                        <h2>Shopping Cart</h2>
+                        <div class="price-header">Price</div>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <a href="#" class="deselect-link">Deselect all items</a>
+                    </div>
+
+                    <div id="cartListBody">
+                        <!-- Cart items injected here (DIV structure now) -->
+                    </div>
+
+                    <div id="emptyCartMessage" class="empty-state" style="display: none;">
+                        <h2>Your Amazon Cart is empty.</h2>
+                        <p>Check your Saved for Later items below or continue shopping.</p>
+                        <a href="index.html" class="amz-btn-checkout"
+                            style="width: auto; padding: 10px 20px; margin-top: 20px;">Continue Shopping</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Summary -->
+                <div class="cart-summary-card">
+                    <!-- Free Shipping Progress Block could go here -->
+                    <div style="font-size: 12px; color: #007600; margin-bottom: 10px;">
+                        <i class="fas fa-check-circle"></i> Your order qualifies for FREE Shipping.
+                    </div>
+
+                    <div class="amz-subtotal">
+                        Subtotal (<span id="cartCountSub">0</span> items): <span id="cartPageTotal">₹0</span>
+                    </div>
+
+                    <div style="margin-bottom: 15px; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+                        <input type="checkbox" checked style="width: 14px; height: 14px;"> This order contains a gift
+                    </div>
+
+                    <button id="checkoutPageBtn" class="amz-btn-checkout">Proceed to Buy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cta-footer">
+        <div class="container text-center">
+            <h2>Experience the Future of Digital Shopping</h2>
+            <div class="copyright">
+                2025 Digital Mart. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

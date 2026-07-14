@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitalMart - One App. Endless Services.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-container">
+      <div class="logo">DIGITAL<span>MART</span></div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search for products, brands, or categories..." id="searchInput">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#" data-target="home">Home</a></li>
+        <li><a href="#services" data-target="services">Services</a></li>
+        <li><a href="#" id="openVendorRegistration">Become a Vendor</a></li>
+        <li><a href="#vendor-dashboard" data-target="vendor-dashboard" id="openVendorDashboard">Vendor Dashboard</a>
+        </li>
+        <li><a href="#" class="login-btn" id="openLogin">Login</a></li>
+        <li><a href="#" class="login-btn" id="openSignup">Sign up</a></li>
+        <li><button id="themeToggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button></li>
+        <li class="cart-indicator">
+          <a href="cart.html"
+            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 5px;">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">0</span>
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Your Complete <span>Digital Mart.</span></h1>
+        <p>From fashion and beauty to fresh groceries and tech essentials. Browse thousands of products in your digital
+          basket, delivered with professional care.</p>
+        <div class="hero-buttons">
+          <a href="#" id="openAbout" class="btn btn-primary">ABOUT</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=2000&auto=format&fit=crop"
+            alt="Digital Shopping Basket">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <a href>
+          <h2>Our Multi-Service Platform</h2>
+          <div class="underline"></div>
+        </a>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-shopping-cart flat-icon"></i>
+          <h3>E-Commerce</h3>
+          <p>Electronics, essentials, and lifestyle products.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-utensils flat-icon"></i>
+          <h3>Food Delivery</h3>
+          <p>Order from top restaurants near you.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-apple-alt flat-icon"></i>
+          <h3>Groceries</h3>
+          <p>Fresh groceries delivered in minutes.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-tshirt flat-icon"></i>
+          <h3>Fashion</h3>
+          <p>Trending styles from top brands.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-spa flat-icon"></i>
+          <h3>Beauty</h3>
+          <p>Skincare, cosmetics, and wellness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-products">
+    <div class="container">
+      <div class="category-block">
+        <h3>E-Commerce</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="marketing-badge">Best Seller</div>
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=600" alt="Wireless Earbuds">
+            </div>
+            <h4>Wireless Earbuds</h4>
+            <p class="price">₹1,999</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Wireless Earbuds" data-price="1999">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?q=80&w=600" alt="Smartphone Stand">
+            </div>
+            <h4>Smartphone Stand</h4>
+            <p class="price">₹399</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Smartphone Stand" data-price="399">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="laptop-backpack.jpg" alt="Laptop Backpack">
+            </div>
+            <h4>Laptop Backpack</h4>
+            <p class="price">₹1,499</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Laptop Backpack" data-price="1499">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="bluetooth-speaker.png" alt="Bluetooth Speaker">
+            </div>
+            <h4>Bluetooth Speaker</h4>
+            <p class="price">₹2,299</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Bluetooth Speaker" data-price="2299">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=600&auto=format&fit=crop"
+                alt="USB-C Charger">
+            </div>
+            <h4>USB-C Charger</h4>
+            <p class="price">₹799</p>
+            <button class="btn btn-primary btn-add-cart" data-name="USB-C Charger" data-price="799">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-block">
+        <h3>Food Delivery</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="marketing-badge sale">Limited</div>
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600" alt="Margherita Pizza">
+            </div>
+            <h4>Margherita Pizza</h4>
+            <p class="price">₹299</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Margherita Pizza" data-price="299">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="veg-biryani.jpg" alt="Veg Biryani">
+            </div>
+            <h4>Veg Biryani</h4>
+            <p class="price">₹249</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Veg Biryani" data-price="249">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="paneer-combo.jpg" alt="Paneer Tikka Combo">
+            </div>
+            <h4>Paneer Tikka Combo</h4>
+            <p class="price">₹349</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Paneer Tikka Combo" data-price="349">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=600" alt="Burger Meal">
+            </div>
+            <h4>Burger Meal</h4>
+            <p class="price">₹199</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Burger Meal" data-price="199">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600" alt="Dessert Brownie">
+            </div>
+            <h4>Dessert Brownie</h4>
+            <p class="price">₹149</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Dessert Brownie" data-price="149">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-block">
+        <h3>Groceries</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?q=80&w=600" alt="Organic Apples">
+            </div>
+            <h4>Organic Apples 1kg</h4>
+            <p class="price">₹189</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Organic Apples 1kg" data-price="189">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=600" alt="Basmati Rice">
+            </div>
+            <h4>Basmati Rice 5kg</h4>
+            <p class="price">₹599</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Basmati Rice 5kg" data-price="599">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="atta-5kg.jpg" alt="Whole Wheat Atta 5kg">
+            </div>
+            <h4>Whole Wheat Atta 5kg</h4>
+            <p class="price">₹349</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Whole Wheat Atta 5kg" data-price="349">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="milk-pack.jpg" alt="Milk 1L Pack">
+            </div>
+            <h4>Milk 1L Pack</h4>
+            <p class="price">₹65</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Milk 1L Pack" data-price="65">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="eggs.png" alt="Eggs">
+            </div>
+            <h4>Eggs Pack of 12</h4>
+            <p class="price">₹120</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Eggs Pack of 12" data-price="120">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-block">
+        <h3>Fashion</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=600" alt="Cotton T-Shirt">
+            </div>
+            <h4>Cotton T-Shirt</h4>
+            <p class="price">₹499</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Cotton T-Shirt" data-price="499">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600" alt="Slim Fit Jeans">
+            </div>
+            <h4>Slim Fit Jeans</h4>
+            <p class="price">₹1,299</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Slim Fit Jeans" data-price="1299">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600" alt="Running Shoes">
+            </div>
+            <h4>Running Shoes</h4>
+            <p class="price">₹2,499</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Running Shoes" data-price="2499">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=600" alt="Summer Dress">
+            </div>
+            <h4>Summer Dress</h4>
+            <p class="price">₹1,099</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Summer Dress" data-price="1099">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="casual-shirt.jpg" alt="Casual Shirt">
+            </div>
+            <h4>Casual Shirt</h4>
+            <p class="price">₹899</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Casual Shirt" data-price="899">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-block">
+        <h3>Beauty</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="beauty-cream.jpg" alt="Moisturizing Cream">
+            </div>
+            <h4>Moisturizing Cream</h4>
+            <p class="price">₹699</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Moisturizing Cream" data-price="699">Add to
+              Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="beauty-facewash.jpg" alt="Face Wash">
+            </div>
+            <h4>Face Wash</h4>
+            <p class="price">₹349</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Face Wash" data-price="349">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="beauty-lipstick.jpg" alt="Lipstick Set">
+            </div>
+            <h4>Lipstick Set</h4>
+            <p class="price">₹799</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Lipstick Set" data-price="799">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="beauty-shampoo.jpg" alt="Shampoo">
+            </div>
+            <h4>Shampoo 500ml</h4>
+            <p class="price">₹449</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Shampoo 500ml" data-price="449">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="beauty-bodylotion.jpg" alt="Body Lotion">
+            </div>
+            <h4>Body Lotion</h4>
+            <p class="price">₹399</p>
+            <button class="btn btn-primary btn-add-cart" data-name="Body Lotion" data-price="399">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="affiliate-showcase">
+    <div class="container">
+      <div class="section-title">
+        <h2>Premium Affiliate Catalog</h2>
+        <div class="underline"></div>
+        <p>10 Curated fashion trends from our global partners</p>
+      </div>
+
+      <!-- Amazon Section (10 Products) -->
+      <div class="affiliate-brand-header amazon-theme">
+        <i class="fab fa-amazon"></i> Amazon Essentials <span>Curated Lifestyle & Fashion</span>
+      </div>
+      <div class="affiliate-grid">
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/61LuLR7IR5L._SL1500_.jpg" alt="Vincent Chase Sunglasses">
+          </div>
+          <div class="affiliate-info">
+            <h3>Vincent Chase By Lenskart | Full Rim Square | Polarized Sunglasses</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹540</span>
+              <a href="https://amzn.in/d/0fDREBQx" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/71Nfft-BTlL._SL1080_.jpg" alt="Satyam Kraft Gift Boxes">
+          </div>
+          <div class="affiliate-info">
+            <h3>SATYAM KRAFT 12 Pcs Multipurpose Folding Gift Boxes</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹299</span>
+              <a href="https://amzn.in/d/06Yph0Fk" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/817TyZBrgpL._SL1500_.jpg" alt="Cavalo Leather Diary">
+          </div>
+          <div class="affiliate-info">
+            <h3>CAVALO - Be Unique Leather Diary Embossed With Leaf</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹498</span>
+              <a href="https://amzn.in/d/0fqeVKoR" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/51m1YaV9CIL._SL1500_.jpg" alt="Anni Designer Kurta Set">
+          </div>
+          <div class="affiliate-info">
+            <h3>ANNI Designer Women’s Purple Printed Kurta Set</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹699</span>
+              <a href="https://amzn.in/d/0jekLDr8" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/71YsLWld2nL._SL1500_.jpg" alt="Ohuhu Alcohol Markers">
+          </div>
+          <div class="affiliate-info">
+            <h3>Ohuhu Alcohol Markers - Double Tipped Art Marker Set</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹5,699</span>
+              <a href="https://amzn.in/d/026K3eep" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/716qNF5a6oL._SL1024_.jpg" alt="Kuber Cabinet Organizer">
+          </div>
+          <div class="affiliate-info">
+            <h3>Kuber Industries Drawer Cabinet Storage Organizer Box</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹1,299</span>
+              <a href="https://amzn.in/d/0guffYqU" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/71yj-dwvxhL._SL1500_.jpg" alt="Symbol Women's Sling Bag">
+          </div>
+          <div class="affiliate-info">
+            <h3>Symbol Premium Women's Sling Bag | Stylish Handbag</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹1,249</span>
+              <a href="https://amzn.in/d/08brzXs5" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/81mo9noDXpL._SL1500_.jpg" alt="HUDA GIRL Eyeshadow Palette">
+          </div>
+          <div class="affiliate-info">
+            <h3>HUDA GIRL Beauty Eyeshadow Palette Combo Kit</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹299</span>
+              <a href="https://amzn.in/d/073C7553" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/71Fp6O21FVL._SL1398_.jpg" alt="Inovera Makeup Bag">
+          </div>
+          <div class="affiliate-info">
+            <h3>INOVERA (LABEL) Nylon Makeup Organizer Bag</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹739</span>
+              <a href="https://amzn.in/d/0aqwCDxW" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="affiliate-card amazon-card">
+          <div class="affiliate-thumb">
+            <img src="https://m.media-amazon.com/images/I/61nbjjISoHL._SL1500_.jpg" alt="Marc Loire Heels">
+          </div>
+          <div class="affiliate-info">
+            <h3>Marc Loire Women's Open Toe Block Heel Metallic Sandals</h3>
+            <div class="affiliate-meta">
+              <span class="aff-price">₹898</span>
+              <a href="https://amzn.in/d/0iIEVDta" target="_blank" class="aff-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <section class="showcase">
+    <div class="section-title">
+      <h2>Trending This Week</h2>
+      <p>Explore our latest collections and services.</p>
+    </div>
+    <div class="promo-grid">
+      <div class="promo-item wide">
+        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop"
+          alt="Fruit Shop Open Everyday">
+        <div class="promo-overlay">
+          <h3>Fresh Fruits</h3>
+          <a href="https://www.bigbasket.com" target="_blank" rel="noopener noreferrer">
+            <button>Shop Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="promo-item">
+        <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=1000&auto=format&fit=crop"
+          alt="Find your favorite style">
+        <div class="promo-overlay">
+          <h3>Beauty & Style</h3>
+        </div>
+      </div>
+      <div class="promo-item">
+        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=2070&auto=format&fit=crop"
+          alt="Homemade Food Tiffin">
+        <div class="promo-overlay">
+          <h3>Home Food</h3>
+          <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer">
+            <button>Order Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="promo-item wide">
+        <img src="tech-gadgets-v2.png" alt="Tech & Gadgets">
+        <div class="promo-overlay">
+          <h3>Tech & Gadgets</h3>
+          <a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer">
+            <button>View Details</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="services-nav">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Multi-Service Platform</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="brand-grid">
+        <a href="https://www.amazon.in" target="_blank" class="brand-card">
+          <div class="brand-icon amazon"></div>
+          <span>Amazon</span>
+        </a>
+        <a href="https://www.flipkart.com" target="_blank" class="brand-card">
+          <div class="brand-icon flipkart"></div>
+          <span>Flipkart</span>
+        </a>
+        <a href="https://www.bigbasket.com" target="_blank" class="brand-card">
+          <div class="brand-icon bigbasket"></div>
+          <span>BigBasket</span>
+        </a>
+        <a href="https://www.swiggy.com" target="_blank" class="brand-card">
+          <div class="brand-icon swiggy"></div>
+          <span>Swiggy</span>
+        </a>
+        <a href="https://www.myntra.com" target="_blank" class="brand-card">
+          <div class="brand-icon myntra"></div>
+          <span>Myntra</span>
+        </a>
+        <a href="https://www.swiggy.com/instamart" target="_blank" class="brand-card">
+          <div class="brand-icon instamart"></div>
+          <span>Instamart</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-showcase">
+    <div class="container">
+      <div class="section-title">
+        <h2>Trending Essentials</h2>
+        <p>Curated recommendations powered by AI</p>
+      </div>
+      <div class="dynamic-grid">
+        <div class="showcase-card tall"
+          style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070');">
+          <div class="card-content">
+            <span class="tag">Flagship</span>
+            <h3>Dashing Details</h3>
+            <p>Premium wireless audio experience.</p>
+            <button class="btn-shop">View Range</button>
+          </div>
+        </div>
+        <div class="showcase-card"
+          style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2080');">
+          <div class="card-content">
+            <span class="tag">Homemade</span>
+            <h3>Tiffin Service</h3>
+            <button class="btn-shop">Order Now</button>
+          </div>
+        </div>
+        <div class="showcase-card" style="background-image: url('beauty-lipstick.jpg');">
+          <div class="card-content">
+            <span class="tag">Beauty</span>
+            <h3>Luxury Cosmetics</h3>
+            <button class="btn-shop">Shop Now</button>
+          </div>
+        </div>
+        <div class="showcase-card" style="background-image: url('casual-shirt.jpg');">
+          <div class="card-content">
+            <span class="tag">Style</span>
+            <h3>Modern Apparel</h3>
+            <button class="btn-shop">Explore</button>
+          </div>
+        </div>
+        <div class="showcase-card"
+          style="background-image: url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=1901');">
+          <div class="card-content">
+            <span class="tag">Tech</span>
+            <h3>Gadgets & Gear</h3>
+            <button class="btn-shop">Shop Now</button>
+          </div>
+        </div>
+        <div class="showcase-card wide"
+          style="background-image: url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070');">
+          <div class="card-content">
+            <span class="tag">Fresh</span>
+            <h3>Organic Fruit Shop</h3>
+            <p>Open Daily: 8:00am - 7:30pm</p>
+            <button class="btn-shop">Visit Store</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <!-- About Digital Mart Modal -->
+  <div class="modal" id="aboutModal">
+    <div class="modal-content auth-card">
+      <button class="modal-close" data-close="aboutModal">&times;</button>
+      <h3>About Digital Mart</h3>
+      <p style="font-size: 0.9rem; color: #4b5563; line-height: 1.6; margin-top: 10px;">
+        Digital Mart is a smart, all-in-one digital marketplace designed to transform the way you shop online. Our
+        platform brings together leading e-commerce and delivery services such as Amazon, Flipkart, Myntra, Swiggy,
+        Instamart, and BigBasket into one seamless digital hub. With just a single click on your preferred platform’s
+        icon, you are instantly redirected to its official website to browse and complete your purchase securely—without
+        the need to download multiple apps. By centralizing access to trusted brands and services, Digital Mart saves
+        you time, reduces clutter, and delivers a smooth, convenient shopping experience all in one place.
+      </p>
+      <p style="font-size: 0.9rem; color: #4b5563; line-height: 1.6; margin-top: 10px;">
+        Beyond connecting you to top platforms, Digital Mart also features a carefully selected range of products
+        available for direct purchase on our website, with secure payments processed within our own system. Transactions
+        for external platforms are completed exclusively on their respective websites, ensuring transparency and
+        security. Additionally, we proudly support local entrepreneurs through our “Become a Vendor” program, allowing
+        sellers to create accounts, showcase their products, and grow their business within our ecosystem. Digital Mart
+        is more than a marketplace—it is a dynamic digital destination built to empower shoppers and sellers alike.
+      </p>
+    </div>
+  </div>
+
+  <!-- Vendor Registration as Modal -->
+  <div class="modal" id="vendorModal">
+    <div class="modal-content">
+      <button class="modal-close" data-close="vendorModal">&times;</button>
+      <div class="section-title" style="margin-bottom: 20px;">
+        <h2>Vendor Registration</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="vendor-layout">
+        <div class="vendor-card">
+          <h3>Register as a Vendor</h3>
+          <form id="vendorForm">
+            <div class="form-group">
+              <label for="businessName">Business Name</label>
+              <input type="text" id="businessName" name="businessName" required>
+            </div>
+            <div class="form-group">
+              <label for="ownerName">Owner Name</label>
+              <input type="text" id="ownerName" name="ownerName" required>
+            </div>
+            <div class="form-group">
+              <label for="panNumber">PAN Number</label>
+              <input type="text" id="panNumber" name="panNumber" maxlength="10" required>
+            </div>
+            <div class="form-group">
+              <label for="incomeTaxDetails">Income Tax Details</label>
+              <textarea id="incomeTaxDetails" name="incomeTaxDetails" rows="3"
+                placeholder="ITR acknowledgement number, assessment year, etc." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="gstNumber">GST Number</label>
+              <input type="text" id="gstNumber" name="gstNumber" maxlength="15" required>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Submit for Verification</button>
+          </form>
+        </div>
+        <div class="vendor-status-card">
+          <h3>Verification Status</h3>
+          <p id="vendorStatus" class="status-pill status-pending">No application submitted</p>
+          <div class="status-actions">
+            <button id="simulateVerify" class="btn btn-outline small">Simulate Verification</button>
+            <button id="simulateBlock" class="btn btn-outline small danger">Simulate Block Vendor</button>
+          </div>
+          <p class="status-note">After successful verification, vendors can start listing products. Any suspicious
+            activity will result in the account being blocked.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content auth-card">
+      <button class="modal-close" data-close="loginModal">&times;</button>
+      
+      <!-- Login View -->
+      <div id="loginView">
+        <h3>Login to DigitalMart</h3>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Login</button>
+        </form>
+        <p class="auth-note">Don't have an account? <a href="#" id="showSignupLink" style="color: #FF5722; text-decoration: none; font-weight: bold;">Sign Up</a></p>
+      </div>
+
+      <!-- Signup View -->
+      <div id="signupView" style="display: none;">
+        <h3>Create your DigitalMart account</h3>
+        <form id="signupForm">
+          <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+          </div>
+          <div class="form-group">
+            <label for="signupRole">Account Type</label>
+            <select id="signupRole" name="signupRole" required>
+              <option value="user" selected>User</option>
+              <option value="vendor">Vendor</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Sign up</button>
+        </form>
+        <p class="auth-note">Already have an account? <a href="#" id="showLoginLink" style="color: #FF5722; text-decoration: none; font-weight: bold;">Login</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content cart-modal-content">
+      <button class="modal-close" data-close="cartModal">&times;</button>
+      <h3>Your Shopping Cart</h3>
+      <div class="cart-body">
+        <ul id="cartItems" class="cart-items-list">
+          <!-- Cart items will be injected here by JS -->
+          <li class="empty-cart-msg">Your cart is empty. Start shopping!</li>
+        </ul>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotalAmount">₹0</span>
+        </div>
+        <button id="checkoutBtn" class="btn btn-primary full-width">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="vendor-dashboard" class="vendor-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Vendor Dashboard</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="vendor-layout">
+        <div class="vendor-card">
+          <h3>Store Overview</h3>
+          <div class="status-actions" style="margin-bottom: 20px;">
+            <div class="status-pill status-verified">Demo Store Active</div>
+          </div>
+          <p class="status-note">In a real system, this area would show your live sales, orders and payout summaries.
+          </p>
+          <button class="btn btn-primary full-width" style="margin-top: 15px;">Add New Product (Demo)</button>
+        </div>
+        <div class="vendor-status-card">
+          <h3>Recent Products (Demo)</h3>
+          <ul class="status-note" style="list-style:none; padding-left:0;">
+            <li>Wireless Earbuds - Electronics</li>
+            <li>Veg Biryani Combo - Food</li>
+            <li>Whole Wheat Atta 5kg - Groceries</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cta-footer">
+    <div class="container text-center">
+      <h2>Experience the Future of Digital Shopping</h2>
+      <p>Join thousands of users using one powerful platform.</p>
+      <button class="btn btn-launch">LAUNCH DIGITAL MART</button>
+    </div>
+    <div class="copyright">
+      2025 Digital Mart. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+
+</html>
